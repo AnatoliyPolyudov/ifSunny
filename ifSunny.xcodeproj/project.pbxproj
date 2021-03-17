@@ -13,6 +13,11 @@
 		D881488225FE44B800A40A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D881488025FE44B800A40A1F /* Main.storyboard */; };
 		D881488425FE44BD00A40A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D881488325FE44BD00A40A1F /* Assets.xcassets */; };
 		D881488725FE44BD00A40A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D881488525FE44BD00A40A1F /* LaunchScreen.storyboard */; };
+		D8ACA4D025FE6B0F00575998 /* ViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ACA4CF25FE6B0F00575998 /* ViewController+AlertController.swift */; };
+		D8ACA4D325FE96AC00575998 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ACA4D225FE96AC00575998 /* NetworkWeatherManager.swift */; };
+		D8ACA4D725FE9CED00575998 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ACA4D625FE9CED00575998 /* Constants.swift */; };
+		D8ACA4DA2600113100575998 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ACA4D92600113100575998 /* CurrentWeatherData.swift */; };
+		D8ACA4DD2600A01500575998 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ACA4DC2600A01500575998 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		D881488325FE44BD00A40A1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D881488625FE44BD00A40A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D881488825FE44BD00A40A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8ACA4CF25FE6B0F00575998 /* ViewController+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+AlertController.swift"; sourceTree = "<group>"; };
+		D8ACA4D225FE96AC00575998 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
+		D8ACA4D625FE9CED00575998 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D8ACA4D92600113100575998 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
+		D8ACA4DC2600A01500575998 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		D881487925FE44B800A40A1F /* ifSunny */ = {
 			isa = PBXGroup;
 			children = (
-				D881487A25FE44B800A40A1F /* AppDelegate.swift */,
-				D881487C25FE44B800A40A1F /* SceneDelegate.swift */,
-				D881487E25FE44B800A40A1F /* ViewController.swift */,
-				D881488025FE44B800A40A1F /* Main.storyboard */,
-				D881488325FE44BD00A40A1F /* Assets.xcassets */,
-				D881488525FE44BD00A40A1F /* LaunchScreen.storyboard */,
-				D881488825FE44BD00A40A1F /* Info.plist */,
+				D881489425FE466600A40A1F /* Model */,
+				D881489225FE464A00A40A1F /* View */,
+				D881489325FE465800A40A1F /* Controller */,
+				D881488F25FE462B00A40A1F /* Extension */,
+				D881489525FE467400A40A1F /* Supporting files */,
 			);
 			path = ifSunny;
+			sourceTree = "<group>";
+		};
+		D881488F25FE462B00A40A1F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D8ACA4CF25FE6B0F00575998 /* ViewController+AlertController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D881489225FE464A00A40A1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D881488025FE44B800A40A1F /* Main.storyboard */,
+				D881488525FE44BD00A40A1F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D881489325FE465800A40A1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D881487E25FE44B800A40A1F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D881489425FE466600A40A1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8ACA4D225FE96AC00575998 /* NetworkWeatherManager.swift */,
+				D8ACA4D92600113100575998 /* CurrentWeatherData.swift */,
+				D8ACA4DC2600A01500575998 /* CurrentWeather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D881489525FE467400A40A1F /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D881487A25FE44B800A40A1F /* AppDelegate.swift */,
+				D881487C25FE44B800A40A1F /* SceneDelegate.swift */,
+				D881488325FE44BD00A40A1F /* Assets.xcassets */,
+				D881488825FE44BD00A40A1F /* Info.plist */,
+				D8ACA4D625FE9CED00575998 /* Constants.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D881487F25FE44B800A40A1F /* ViewController.swift in Sources */,
+				D8ACA4D025FE6B0F00575998 /* ViewController+AlertController.swift in Sources */,
+				D8ACA4DD2600A01500575998 /* CurrentWeather.swift in Sources */,
+				D8ACA4D325FE96AC00575998 /* NetworkWeatherManager.swift in Sources */,
 				D881487B25FE44B800A40A1F /* AppDelegate.swift in Sources */,
 				D881487D25FE44B800A40A1F /* SceneDelegate.swift in Sources */,
+				D8ACA4DA2600113100575998 /* CurrentWeatherData.swift in Sources */,
+				D8ACA4D725FE9CED00575998 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +347,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ifSunny/Info.plist;
+				DEVELOPMENT_TEAM = D559B7ZD7Z;
+				INFOPLIST_FILE = "ifSunny/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +366,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ifSunny/Info.plist;
+				DEVELOPMENT_TEAM = D559B7ZD7Z;
+				INFOPLIST_FILE = "ifSunny/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
